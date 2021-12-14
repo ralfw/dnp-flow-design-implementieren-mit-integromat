@@ -1,2 +1,2 @@
-# dnp-flow-design-implementieren-mit-integromat
-Code zum gleichnamigen Artikel in der dotnetpro
+# flow-design-implementieren-mit-integromat
+Begleitender Code zum gleichnamigen Artikel in der dotnetpro
