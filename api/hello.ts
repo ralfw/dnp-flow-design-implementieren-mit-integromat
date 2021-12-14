@@ -1,1 +1,1 @@
-console.log(`hello, world! @ ${new Date().toISOString()} from ${Deno.version.deno}`);
+export default () => new Response(`Hallo, from Deno v${Deno.version.deno} @ ${new Date().toISOString()}!`);
