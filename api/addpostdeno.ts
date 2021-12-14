@@ -1,4 +1,4 @@
 export default (req:Request) => {
     console.log(req);
-    return new Response(`Hello, from Deno! v${Deno.version.deno}!`);
+    return new Response(`Hello, from Deno! v${Deno.version.deno}! ${new Date().toLocaleTimeString()}`);
 }
