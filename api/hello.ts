@@ -1,1 +1,1 @@
-console.log(`hello, world! @ ${new Date().toISOString()}`);
+console.log(`hello, world! @ ${new Date().toISOString()} from ${Deno.version.deno}`);
