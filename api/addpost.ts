@@ -1,3 +1,5 @@
+#!/usr/bin/env DENO_DIR=/tmp deno run
+
 import { Application } from "https://deno.land/x/oak/mod.ts";
 
 const app = new Application();
@@ -5,7 +7,7 @@ const app = new Application();
 app.use(async (ctx) => {
     console.log(ctx)
     console.log("---------------")
-    const operands = await ctx.request.body().value; // receive json data
+    var operands = await ctx.request.body().value;
     console.log(`calc with request body params: ${operands.A}+${operands.B}`)
     ctx.response.body = { Result: operands.A + operands.B }; // return json data
 });
