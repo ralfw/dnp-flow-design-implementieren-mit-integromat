@@ -1,6 +1,10 @@
-import { ServerRequest } from 'https://deno.land/std@0.89.0/http/server.ts'
+import { Response, ServerRequest } from 'https://deno.land/std@0.89.0/http/server.ts'
 
-export default (req:ServerRequest) => {
-    console.log(req);
-    return new Response(`Hello, from Deno!! v${Deno.version.deno}! ${new Date().toLocaleTimeString()}`);
+export default async (req:ServerRequest) => {
+    const body = new TextDecoder().decode(
+        await Deno.readAll(req.body)
+    )
+    console.log("--------")
+    console.log(body)
+    return new Response(`Hello! @ ${new Date().toLocaleTimeString()}`);
 }
